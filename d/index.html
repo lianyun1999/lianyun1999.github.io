@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>广工新闻</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--引用jQuery Mobile函数库-->
+<link rel="stylesheet" href="jquery.mobile-1.4.0.min.css" />
+<script src="jquery-1.9.1.min.js"></script>
+<script src="jquery.mobile-1.4.0.min.js"></script>
+<!--最佳化屏幕宽度-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+#content{text-align:center;}
+
+</style>
+<script type="text/javascript">
+$( document ).one( "pagecreate", ".demo_page", function() {
+    $("#goSecond").on('click',function(){
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#second", {
+            transition: "slide"
+        });
+    });
+    $("#gofirst").on('click',function(){
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#first", {
+            transition: "pop"
+        });
+    });
+
+})
+</script>
+</head>
+<body>
+
+	<div data-role="page" data-title="广工新闻" id="first"  class="demo_page">
+		<div data-role="header" data-position="fixed">
+			<h1>广工新闻</h1>
+		</div>
+		<div data-role="content" id="content">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div ><a href="https://www.starbucks.com.cn/menu/food/cake-dessert/" data-role="button"><img src="images/甜点.jpg" alt="甜点
+                        " width=100px></a></div>
+                </div>
+                <div class="ui-block-b">
+                    <div ><a href="https://v.qq.com/" data-role="button"><img src="images/腾讯视频.jpg" alt="腾讯视频" width=100px></a></div>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div ><a href="http://jsjxy.gdut.edu.cn/" data-role="button"><img src="images/计算机学院.jpg" alt="计算机学院" width=100px></a></div>
+                </div>
+                <div class="ui-block-b">
+                    <div ><a href="https://www.taobao.com/" data-role="button"><img src="images/淘宝.jpg" alt="淘宝" width=100px></a></div>
+                </div>
+            </div>
+		</div>
+		<div data-role="footer">
+            <h6>地址：广州市番禺区大学城外环西路100号</h6>
+            <h6>电话：020-39322321</h6>
+            <h6>网址：<a href="http://www.gdut.edu.cn/">http://www.gdut.edu.cn/</a></h6>
+        </div>
+		</div>
+	
+</body>
+</html>
